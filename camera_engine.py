@@ -18,7 +18,7 @@ class CameraEngine:
         self.rtsp_url = Config.RTSP_URL
         self.frame_rate = Config.MAX_FPS
         self.resolution = (Config.CAMERA_WIDTH, Config.CAMERA_HEIGHT)
-        # محاولة تهيئة الكاميرا (لا نفشل إذا لم تكن متصلة)
+        # محاولة تهيئة الكاميرا 
         try:
             self._init_camera()
         except Exception as e:
@@ -27,7 +27,7 @@ class CameraEngine:
         
     def set_mode(self, mode):
         """تغيير وضع التشغيل (للتوافق مع API القديم)"""
-        # تم إزالة وضع المحاكاة، يتم استخدام الكاميرا فقط
+
         if mode != 'camera':
             self._init_camera()
     
